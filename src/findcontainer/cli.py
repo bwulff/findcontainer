@@ -1,3 +1,4 @@
+import sys
 import click
 from docker import DockerClient
 
@@ -19,3 +20,4 @@ def cli(pid):
         print(processes[pid][8])
     else:
         print(f"pid {pid} not found in any running Docker container.")
+        sys.exit(-1)
